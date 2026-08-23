@@ -1,0 +1,273 @@
+/* ==========================================
+   AI PROJECTS SECTION
+========================================== */
+
+.ai-projects {
+    position: relative;
+    padding: 120px 8%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.ai-projects::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -180px;
+    left: -180px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, .10);
+    filter: blur(120px);
+}
+
+.ai-projects-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 70px;
+}
+
+.ai-projects-header h2 {
+    font-size: 48px;
+    color: var(--text);
+    margin: 18px 0;
+    font-weight: 800;
+}
+
+.ai-projects-header p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.ai-projects-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.ai-project-card {
+    background: var(--surface);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--ov-08);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: .35s ease;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+}
+
+.ai-project-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .50), 0 0 40px rgba(37, 99, 235, .12);
+}
+
+.ai-image {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 135deg, rgba(37, 99, 235, 0.16), rgba(9, 9, 13, 0.6));
+    font-size: 60px;
+    color: var(--accent);
+    overflow: hidden;
+}
+
+.ai-project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ai-content {
+    padding: 30px;
+}
+
+.ai-content h3 {
+    color: var(--text);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.ai-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.ai-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.ai-tech span {
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.10);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.ai-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.ai-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    border-radius: 999px;
+    background: linear-gradient( 135deg, var(--primary), var(--primary-light));
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .35s;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .25);
+}
+
+.ai-btn:hover {
+    transform: translateY(-4px);
+}
+
+.ai-btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--primary);
+    box-shadow: none;
+}
+
+.ai-btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+@media(max-width:768px) {
+    .ai-projects {
+        padding: 90px 5%;
+    }
+    .ai-projects-header h2 {
+        font-size: 34px;
+    }
+    .ai-buttons {
+        flex-direction: column;
+    }
+}
+
+
+/* ==========================================
+    AI PROJECTS PREMIUM EFFECTS
+ ========================================== */
+
+.ai-project-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+
+/* 3D Hover */
+
+.ai-project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .55), 0 0 50px rgba(37, 99, 235, .15);
+}
+
+
+/* AI Glow Border */
+
+.ai-project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    background: linear-gradient( 135deg, rgba(37, 99, 235, .35), transparent, rgba(59, 130, 246, .35));
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+}
+
+.ai-project-card:hover::before {
+    opacity: 1;
+}
+
+
+/* AI Image Animation */
+
+.ai-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-image::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, .22);
+    filter: blur(40px);
+    animation: aiPulse 4s infinite;
+}
+
+@keyframes aiPulse {
+    0% {
+        transform: scale(.8);
+        opacity: .5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(.8);
+        opacity: .5;
+    }
+}
+
+
+/* Tech Badge Hover */
+
+.ai-tech span {
+    transition: .3s ease;
+}
+
+.ai-tech span:hover {
+    transform: translateY(-5px);
+    background: linear-gradient( 135deg, var(--primary), var(--primary-light));
+    color: white;
+}
+
+
+/* Button Shine */
+
+.ai-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, .5), transparent);
+    transition: .6s;
+}
+
+.ai-btn:hover::before {
+    left: 100%;
+}

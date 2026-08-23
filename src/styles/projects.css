@@ -1,0 +1,204 @@
+/* ==========================================
+   FEATURED PROJECTS — MATCHES REFERENCE DESIGN
+========================================== */
+
+.projects {
+    padding: 80px 8%;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    right: -150px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.10);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+/* Header row */
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 2;
+}
+
+.projects .section-tag {
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.projects .section-tag::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--primary);
+    display: inline-block;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: var(--text);
+    transform: translateX(4px);
+}
+
+/* Grid */
+
+.projects-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 26px;
+}
+
+/* Card */
+
+.project-card {
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--ov-08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.50), 0 0 40px rgba(37, 99, 235, 0.12);
+}
+
+.project-image {
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(9, 9, 13, 0.6));
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-content {
+    padding: 22px 24px 26px;
+    position: relative;
+}
+
+.project-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.project-desc-short {
+    color: var(--text-light);
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-right: 96px;
+}
+
+.tech-badge {
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.10);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-links {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    display: flex;
+    gap: 10px;
+}
+
+.project-arrow-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.30);
+    color: var(--accent);
+    font-size: 15px;
+    box-shadow: 4px 4px 10px rgba(163, 177, 198, 0.30), -3px -3px 8px rgba(255, 255, 255, 0.65);
+    transition: 0.3s ease;
+}
+
+body.dark .project-arrow-btn {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.40), -3px -3px 8px rgba(255, 255, 255, 0.03);
+}
+
+.project-arrow-btn:hover {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #ffffff;
+    border-color: transparent;
+    transform: scale(1.08) translateY(-2px);
+}
+
+.project-demo-btn {
+    background: rgba(14, 165, 233, 0.12);
+    border-color: rgba(14, 165, 233, 0.30);
+    color: var(--accent-2);
+}
+
+.project-demo-btn:hover {
+    background: linear-gradient(135deg, var(--accent-2), var(--primary-light));
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .projects { padding: 60px 5%; }
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
