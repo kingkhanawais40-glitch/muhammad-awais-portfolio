@@ -51,6 +51,7 @@
 }
 
 .ai-project-card {
+    position: relative;
     background: var(--surface);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -59,6 +60,7 @@
     overflow: hidden;
     transition: .35s ease;
     box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+    min-width: 0;
 }
 
 .ai-project-card:hover {
@@ -154,15 +156,130 @@
     color: white;
 }
 
-@media(max-width:768px) {
+
+/* ==========================================
+   AI PROJECTS — TABLET
+========================================== */
+
+@media (max-width: 900px) {
     .ai-projects {
         padding: 90px 5%;
     }
+    .ai-projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+    .ai-content {
+        padding: 24px;
+    }
+    .ai-content h3 {
+        font-size: 21px;
+    }
+}
+
+
+/* ==========================================
+   AI PROJECTS — MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+    .ai-projects {
+        padding: 70px 5%;
+    }
+    .ai-projects-header {
+        margin-bottom: 40px;
+    }
     .ai-projects-header h2 {
         font-size: 34px;
+        line-height: 1.15;
+    }
+    .ai-projects-header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    .ai-projects-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 22px;
+    }
+    .ai-project-card {
+        width: 100%;
+        min-width: 0;
+        border-radius: 22px;
+    }
+    .ai-image {
+        height: 200px;
+    }
+    .ai-content {
+        padding: 22px;
+    }
+    .ai-content h3 {
+        font-size: 21px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    .ai-content p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    .ai-tech {
+        gap: 7px;
+        margin-bottom: 22px;
+    }
+    .ai-tech span {
+        padding: 6px 11px;
+        font-size: 12px;
     }
     .ai-buttons {
         flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .ai-btn {
+        width: 100%;
+        flex: none;
+        padding: 13px;
+    }
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+    .ai-projects {
+        padding: 60px 4%;
+    }
+    .ai-projects-header h2 {
+        font-size: 29px;
+    }
+    .ai-projects-header p {
+        font-size: 14px;
+    }
+    .ai-project-card {
+        border-radius: 20px;
+    }
+    .ai-image {
+        height: 180px;
+    }
+    .ai-content {
+        padding: 18px;
+    }
+    .ai-content h3 {
+        font-size: 19px;
+    }
+    .ai-content p {
+        font-size: 13px;
+    }
+    .ai-tech span {
+        font-size: 11px;
+        padding: 5px 9px;
+    }
+    .ai-btn {
+        font-size: 13px;
+        padding: 12px;
     }
 }
 
