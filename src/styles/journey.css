@@ -1,0 +1,261 @@
+/* ==========================================
+   MY JOURNEY — HORIZONTAL MILESTONE TIMELINE
+========================================== */
+
+.journey {
+    padding: 90px 8% 110px;
+    background: transparent;
+    position: relative;
+}
+
+.journey-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 55px;
+}
+
+.journey-tag::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--primary);
+    display: inline-block;
+}
+
+.journey-track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.journey-track::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    opacity: 0.5;
+}
+
+.journey-item {
+    position: relative;
+    text-align: center;
+    padding-top: 34px;
+}
+
+.journey-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0c0a12;
+    border: 2px solid var(--primary);
+    z-index: 2;
+}
+
+.journey-item.active .journey-dot {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-color: var(--accent);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.65);
+}
+
+.journey-item:nth-child(3) .journey-dot {
+    border-color: #22d3ee;
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.45);
+}
+
+.journey-year {
+    display: block;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.journey-item.active .journey-year {
+    color: var(--accent);
+}
+
+.journey-item h4 {
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.journey-item p {
+    color: var(--text-light);
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+    .journey-track {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .journey-track::before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    .journey-item {
+        padding-top: 0;
+        padding-left: 34px;
+        text-align: left;
+    }
+    .journey-dot {
+        top: 4px;
+        left: 0;
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   JOURNEY — PREMIUM MOBILE TIMELINE
+========================================== */
+
+@media (max-width: 900px) {
+    .journey {
+        padding: 75px 5% 85px;
+    }
+    .journey-tag {
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+    .journey-track {
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0 auto;
+        padding-left: 30px;
+        position: relative;
+    }
+    /* Vertical timeline */
+    .journey-track::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 7px;
+        width: 2px;
+        height: auto;
+        transform: none;
+        background: linear-gradient( 180deg, var(--primary), var(--primary-light));
+        opacity: 0.45;
+    }
+    .journey-item {
+        position: relative;
+        width: 100%;
+        padding: 0 0 38px 28px;
+        text-align: left;
+    }
+    .journey-item:last-child {
+        padding-bottom: 0;
+    }
+    /* Timeline dot */
+    .journey-dot {
+        position: absolute;
+        top: 3px;
+        left: -30px;
+        width: 16px;
+        height: 16px;
+        transform: none;
+        background: var(--background);
+        border: 2px solid var(--primary);
+        box-shadow: 0 0 0 5px var(--background);
+    }
+    .journey-item.active .journey-dot {
+        width: 19px;
+        height: 19px;
+        top: 1px;
+        left: -31.5px;
+        box-shadow: 0 0 0 5px var(--background), 0 0 20px rgba(37, 99, 235, 0.6);
+    }
+    .journey-item:nth-child(3) .journey-dot {
+        box-shadow: 0 0 0 5px var(--background), 0 0 15px rgba(34, 211, 238, 0.4);
+    }
+    .journey-year {
+        margin-bottom: 6px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: var(--accent);
+    }
+    .journey-item h4 {
+        margin-bottom: 7px;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    .journey-item p {
+        max-width: 520px;
+        font-size: 13px;
+        line-height: 1.65;
+        color: var(--text-light);
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 450px) {
+    .journey {
+        padding: 65px 5% 75px;
+    }
+    .journey-tag {
+        margin-bottom: 35px;
+        font-size: 13px;
+    }
+    .journey-track {
+        padding-left: 25px;
+    }
+    .journey-track::before {
+        left: 5px;
+    }
+    .journey-item {
+        padding-left: 22px;
+        padding-bottom: 32px;
+    }
+    .journey-dot {
+        left: -25px;
+        width: 14px;
+        height: 14px;
+    }
+    .journey-item.active .journey-dot {
+        width: 17px;
+        height: 17px;
+        left: -26.5px;
+    }
+    .journey-year {
+        font-size: 11px;
+    }
+    .journey-item h4 {
+        font-size: 16px;
+    }
+    .journey-item p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+}

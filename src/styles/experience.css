@@ -1,0 +1,275 @@
+/* ==========================================
+   EXPERIENCE TIMELINE — PREMIUM AI PORTFOLIO
+========================================== */
+
+.experience {
+    position: relative;
+    padding: 120px 8%;
+    background: transparent;
+    overflow: hidden;
+}
+
+
+/* Ambient background glow */
+
+.experience::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: 20%;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.08);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.experience-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.experience-header h2 {
+    margin-top: 18px;
+    color: var(--text);
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* Main timeline line */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: linear-gradient( to bottom, rgba(37, 99, 235, 0), var(--primary) 12%, var(--primary-light) 50%, var(--primary) 88%, rgba(37, 99, 235, 0));
+}
+
+
+/* ==========================================
+   TIMELINE ITEM
+========================================== */
+
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 45px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   TIMELINE DOT
+========================================== */
+
+.timeline-dot {
+    position: absolute;
+    left: 14px;
+    top: 34px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: linear-gradient( 135deg, var(--primary), var(--primary-light));
+    border: 4px solid var(--background);
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.08), 0 0 25px rgba(37, 99, 235, 0.45);
+    z-index: 3;
+}
+
+
+/* ==========================================
+   EXPERIENCE CARD
+========================================== */
+
+.experience-card {
+    position: relative;
+    padding: 32px;
+    background: linear-gradient( 145deg, var(--surface), rgba(37, 99, 235, 0.025));
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--ov-08);
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32);
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+/* Top accent */
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    height: 1px;
+    background: linear-gradient( 90deg, transparent, rgba(59, 130, 246, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+
+/* Hover */
+
+.experience-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(37, 99, 235, 0.30);
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.45), 0 0 35px rgba(37, 99, 235, 0.09);
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   YEAR
+========================================== */
+
+.timeline-year {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 15px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.20);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.experience-card h3 {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.experience-card h4 {
+    margin-bottom: 15px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.experience-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 90px 5%;
+    }
+    .experience-header {
+        margin-bottom: 50px;
+    }
+    .experience-header h2 {
+        font-size: 34px;
+    }
+    .timeline {
+        margin-left: 0;
+    }
+    .timeline::before {
+        left: 18px;
+    }
+    .timeline-item {
+        padding-left: 52px;
+        margin-bottom: 30px;
+    }
+    .timeline-dot {
+        left: 7px;
+        top: 28px;
+        width: 22px;
+        height: 22px;
+    }
+    .experience-card {
+        padding: 24px;
+        border-radius: 19px;
+    }
+    .experience-card:hover {
+        transform: translateY(-5px);
+    }
+    .experience-card h3 {
+        font-size: 21px;
+    }
+    .experience-card p {
+        font-size: 13.5px;
+        line-height: 1.75;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 450px) {
+    .experience {
+        padding: 75px 5%;
+    }
+    .timeline-item {
+        padding-left: 44px;
+    }
+    .timeline::before {
+        left: 15px;
+    }
+    .timeline-dot {
+        left: 4px;
+        width: 21px;
+        height: 21px;
+    }
+    .experience-card {
+        padding: 21px;
+    }
+    .timeline-year {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+    .experience-card h3 {
+        font-size: 19px;
+    }
+}
