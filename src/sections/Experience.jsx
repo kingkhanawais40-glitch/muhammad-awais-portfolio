@@ -5,10 +5,10 @@ function Experience() {
   const experience = [
     {
       year: "2026",
-      title: "Smart Offline Chatbot",
+      title: "Smart AI Chatbot",
       company: "Personal  Project",
       description:
-        "Developed a Smart Offline Chatbot using HTML, CSS, JavaScript, and JSON with 500+ predefined questions, smart keyword matching, voice input, chat history, dark/light mode, and a responsive user interface."
+        "An AI-powered conversational chatbot built with Google Gemini API, featuring contextual responses, voice input, chat history, dark/light mode, and a responsive interface with secure server-side API integration."
     },
     {
       year: "2026",

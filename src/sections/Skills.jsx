@@ -52,7 +52,7 @@ function Skills() {
     },
 
     {
-      name: "Frontend",
+      name: "Frontend Engineering",
       icon: <FaCode />,
       description:
         "Modern interfaces and responsive web application development.",
@@ -66,7 +66,7 @@ function Skills() {
     },
 
     {
-      name: "Backend",
+      name: "Backend Engineering",
       icon: <FaServer />,
       description:
         "Backend development, APIs and application services.",
@@ -99,6 +99,8 @@ function Skills() {
         { name: "GitHub", icon: <FaGithub /> },
         { name: "Streamlit", icon: <SiStreamlit /> },
         { name: "C++", icon: <SiCplusplus /> },
+        { name: "VS Code", icon: <FaCode /> },
+        { name: "Google Colab", icon: <FaTools /> },
       ],
     },
   ];

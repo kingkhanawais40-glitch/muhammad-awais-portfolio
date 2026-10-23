@@ -44,7 +44,7 @@ function About() {
             </h2>
 
             <p className="about-desc">
-              I am a 6th-semester BS Software Engineering student at Sarhad University of Science and Information Technology, specializing in Machine Learning and Artificial Intelligence. My academic journey began at Edwardes College School Wing 1 and continued at Fazaia Inter College, where I developed a strong foundation in science and technology.
+              I am a 7th-semester BS Software Engineering student at Sarhad University of Science and Information Technology, specializing in Machine Learning and Artificial Intelligence. My academic journey began at Edwardes College School Wing 1 and continued at Fazaia Inter College, where I developed a strong foundation in science and technology.
 
 Today, I focus on building software, machine learning models, and intelligent applications that solve practical problems. Through hands-on projects and continuous learning, I am strengthening my skills in software engineering, AI, and modern development technologies.
 
