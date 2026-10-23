@@ -1,28 +1,36 @@
 import Reveal from "../components/Reveal";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import hotelHome from "../assets/projects/hotel-home.png";
-import smartChatbotImage from "../assets/projects/smart-chatbot.jfif";
 import attendancehomeImage from "../assets/projects/attendance-home.png";
 import weatherdashboardImage from "../assets/projects/weather_dashboard.png";
+import NexaposImage from "../assets/projects/Nexapos.png";
 function Projects() {
   const projects = [
-    {
-  title: "Smart Offline Chatbot",
+    
+
+{
+  title: "NexaPOS - Point of Sale System",
   category: "Web Application",
-  image: smartChatbotImage,
+  image: NexaposImage,
   description:
-    "A smart rule-based chatbot built using HTML, CSS, JavaScript and JSON. It features 500+ predefined questions and answers, smart keyword matching, voice input, chat history, dark/light mode and a responsive interface.",
+    "A modern point of sale system designed for seamless transaction management, inventory tracking, and sales analytics in retail environments.",
   tech: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "JSON",
-    "LocalStorage",
-    "Web Speech API",
+    "React.js 19",
+    "Vite 8",
+    "Node.js",
+    "Express 5",
+    "SQLite/MySQL/libSQL",
+    "Axios",
+    "React Router 7",
+    "JWT",
+    "bcryptjs",
+    "Multer",
+    "Vercel"
   ],
-  github: "https://github.com/kingkhanawais40-glitch/smart-chatbot",
-  demo: "https://smart-chatbot-five.vercel.app",
+  github: "https://github.com/kingkhanawais40-glitch/NEXAPOS",
+  demo: "https://nexapos-self.vercel.app",
 },
+
     {
   title: "Hotel Management System",
   category: "Full Stack Web Application",

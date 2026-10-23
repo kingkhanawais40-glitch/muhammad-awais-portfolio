@@ -3,6 +3,8 @@ import Reveal from "../components/Reveal";
 import skindiseasedetectionImage from "../assets/ai projects/skin-disease-detection.png";
 import aiQuizImage from "../assets/ai projects/AI-Quiz-Home.png";
 import aiStudentPerformanceImage from "../assets/ai projects/AI-Student-Performance.png";
+import AICHatbotImage from "../assets/ai projects/smart-chatbot.jfif";
+import aiDataAnalystImage from "../assets/ai projects/AI-Business-Analysis.png";
 
 function AIProjects() {
   const aiProjects = [
@@ -15,6 +17,17 @@ function AIProjects() {
       github: "https://github.com/kingkhanawais40-glitch/ai-quiz-generator",
       demo: "https://ai-quiz-generator-awais.streamlit.app",
     },
+
+    {
+      title: "AI Smart Chatbot",
+      image: AICHatbotImage,
+      description:
+        "An AI-powered conversational chatbot built with Google Gemini API, featuring contextual responses, voice input, chat history, dark/light mode, and a responsive interface with secure server-side API integration.",
+      tech: ["JavaScript", "HTML5", "CSS3", "Google Gemini API", "Serverless Backend", "Vercel"],
+      github: "https://github.com/kingkhanawais40-glitch/smart-chatbot",
+      demo: "https://smart-chatbot-five.vercel.app",
+    },
+
     {
       title: "Skin Disease Detection",
       image: skindiseasedetectionImage,
@@ -37,6 +50,29 @@ function AIProjects() {
         "https://github.com/kingkhanawais40-glitch/skin-disease-detection-ai",
       demo: "#",
     },
+
+    {
+      title: "AI Data Analyst & BI Automation Agent",
+      image: aiDataAnalystImage,
+      description:
+        "An AI-powered business analytics platform that analyzes datasets, evaluates data quality, detects anomalies, answers business questions, generates insights, and visualizes trends through interactive dashboards. Features historical analysis, automated execution workflows, and downloadable reports.",
+      tech: [
+        "Python",
+        "FastAPI",
+        "React.js",
+        "Vite",
+        "SQLite",
+        "Pandas",
+        "Plotly",
+        "REST APIs",
+        "Vercel Blob",
+        "Vercel"
+      ],
+      github:
+        "https://github.com/kingkhanawais40-glitch/ai-data-analyst-agent",
+      demo: "https://ai-data-analyst-agent-sand.vercel.app",
+    },
+
     {
       title: "AI Student Performance Predictor",
       image: aiStudentPerformanceImage,
