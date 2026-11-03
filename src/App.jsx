@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Blog from "./sections/Blog";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
@@ -39,6 +40,7 @@ function App() {
       <Experience />
       <Education />
       <GitHub />
+      <Blog />
       <Contact />
       <Journey />
 

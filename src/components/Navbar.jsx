@@ -120,6 +120,11 @@ function Navbar() {
                 GitHub
               </a>
 
+              <a href="#blog" onClick={closeMobileMenu}>
+                Blog
+              </a>
+
+
             </div>
           )}
 

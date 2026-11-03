@@ -1,7 +1,14 @@
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import profile from "../assets/hero.png";
+import profile1 from "../../assets/hero.png";
+import profile2 from "../../assets/hero2.jfif";
+import profile3 from "../../assets/hero3.jfif";
+import profile4 from "../../assets/hero4.jfif";
+import profile5 from "../../assets/hero5.png";
+import profile6 from "../../assets/hero6.jfif";
+
 import Reveal from "../components/Reveal";
 
 import {
@@ -13,18 +20,28 @@ import {
   FaDownload,
 } from "react-icons/fa";
 
+const profileImages = [
+  profile1,
+  profile2,
+  profile3,
+  profile4,
+  profile5,
+  profile6,
+];
+
 function Hero() {
   const roles = [
-    "I am  Computer Vision Engineer",
-    "I am  Machine Learning Engineer",
-    "I am  AI Engineer",
-    "I am  Software Engineer",
+    "I am Computer Vision Engineer",
+    "I am Machine Learning Engineer",
+    "I am AI Engineer",
+    "I am Software Engineer",
     "I am Problem Solver",
-    "I am  Automation Engineer",
-    "I am  Data Scientist",
+    "I am Automation Engineer",
+    "I am Data Scientist",
   ];
 
   const [roleIndex, setRoleIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,15 +51,21 @@ function Hero() {
     return () => clearInterval(interval);
   }, [roles.length]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prev) => (prev + 1) % profileImages.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero" id="home">
       <Reveal>
         <div className="hero-content">
-
-          {/* ================= LEFT ================= */}
+          {/* LEFT SIDE */}
 
           <div className="hero-left">
-
             <span className="hero-badge">
               <FaArrowRight className="badge-arrow" />
               Engineering Intelligence. Building Solutions.
@@ -53,28 +76,15 @@ function Hero() {
               <span>Muhammad Awais</span>
             </h1>
 
-            {/* Animated Role */}
             <h2 className="hero-role">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={roles[roleIndex]}
                   className="animated-role"
-                  initial={{
-                    opacity: 0,
-                    y: 30,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: -30,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    ease: "easeOut",
-                  }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   {roles[roleIndex]}
                 </motion.span>
@@ -89,9 +99,7 @@ function Hero() {
               impact.
             </p>
 
-            {/* Buttons */}
             <div className="hero-buttons">
-
               <a href="#projects" className="primary-btn">
                 View My Work <FaArrowRight />
               </a>
@@ -103,19 +111,17 @@ function Hero() {
               >
                 Download CV <FaDownload />
               </a>
-
             </div>
           </div>
 
-          {/* ================= RIGHT ================= */}
+          {/* RIGHT SIDE */}
 
           <div className="hero-right">
-
             <div className="hero-hex-pattern"></div>
 
             <div className="hero-image-box">
-
               {/* Code Panel */}
+
               <div className="floating-panel code-panel">
                 <pre>
 {`def solve(problem):
@@ -129,8 +135,8 @@ function Hero() {
               </div>
 
               {/* AI Panel */}
-              <div className="floating-panel ai-panel">
 
+              <div className="floating-panel ai-panel">
                 <FaBrain />
 
                 <span>
@@ -140,19 +146,24 @@ function Hero() {
                 </span>
 
                 <div className="ai-wave"></div>
-
               </div>
 
-              {/* Profile */}
-              <img
-                src={profile}
-                alt="Muhammad Awais"
-                className="hero-image"
-              />
+              {/* Six-Photo Slideshow */}
 
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.img
+                  key={imageIndex}
+                  src={profileImages[imageIndex]}
+                  alt={`Muhammad Awais - Profile Photo ${imageIndex + 1}`}
+                  className="hero-image"
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.02 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+              </AnimatePresence>
             </div>
 
-            {/* Side Text */}
             <div className="hero-side-text">
               Engineering
               <br />
@@ -160,72 +171,52 @@ function Hero() {
               <br />
               With AI
             </div>
-
           </div>
         </div>
 
-        {/* ================= STATS ================= */}
+        {/* STATS */}
 
         <div className="hero-stats">
-
-          {/* Projects */}
           <div className="stat-item">
-
             <div className="stat-icon">
               <FaProjectDiagram />
             </div>
-
             <div>
               <h3>15+</h3>
               <span>Projects Completed</span>
             </div>
-
           </div>
 
-          {/* Experience */}
           <div className="stat-item">
-
             <div className="stat-icon">
               <FaCalendarAlt />
             </div>
-
             <div>
               <h3>2+</h3>
               <span>Years Experience</span>
             </div>
-
           </div>
 
-          {/* Technologies */}
           <div className="stat-item">
-
             <div className="stat-icon">
               <FaLayerGroup />
             </div>
-
             <div>
               <h3>10+</h3>
               <span>Technologies</span>
             </div>
-
           </div>
 
-          {/* AI Focus */}
           <div className="stat-item">
-
             <div className="stat-icon">
               <FaBrain />
             </div>
-
             <div>
               <h3>AI Focused</h3>
               <span>Building Intelligent Solutions</span>
             </div>
-
           </div>
-
         </div>
-
       </Reveal>
     </section>
   );

@@ -388,3 +388,348 @@
 .ai-btn:hover::before {
     left: 100%;
 }
+
+
+/* ==========================================
+   AI PROJECTS — PROFESSIONAL SHOWCASE UPGRADE
+========================================== */
+
+/* Section heading */
+.ai-projects-header .section-tag {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ai-projects-header h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.ai-projects-header h2 span {
+    color: var(--accent);
+}
+
+.ai-projects-header p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid */
+.ai-projects-grid {
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Cards */
+.ai-project-card {
+    height: 100%;
+    border-radius: 22px;
+    transform-style: flat;
+    perspective: none;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.ai-project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(37, 99, 235, 0.45);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* Featured project */
+.ai-project-featured {
+    border-color: rgba(37, 99, 235, 0.55);
+}
+
+.ai-project-featured:hover {
+    border-color: var(--primary);
+}
+
+/* Image */
+.ai-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.ai-project-image {
+    transition: transform 0.5s ease;
+}
+
+.ai-project-card:hover .ai-project-image {
+    transform: scale(1.045);
+}
+
+/* Remove old animated image glow */
+.ai-image::after {
+    display: none;
+    animation: none;
+}
+
+/* Image overlay */
+.ai-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 15px;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 12, 28, 0.65),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+.ai-category,
+.ai-featured-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 7px;
+    background: rgba(10, 20, 40, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+}
+
+.ai-featured-label {
+    color: #ffffff;
+    background: rgba(37, 99, 235, 0.85);
+    border-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Content */
+.ai-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 230px);
+    padding: 25px;
+}
+
+.ai-content h3 {
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.ai-content .ai-description {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Technology heading */
+.ai-tech-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+    color: var(--text-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ai-tech-heading span:last-child {
+    color: var(--accent);
+    letter-spacing: 0;
+}
+
+.ai-tech {
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.ai-tech span {
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-size: 11px;
+    line-height: 1.4;
+    transition: background 0.25s ease, color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.ai-tech span:hover {
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+.ai-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 17px;
+    border-top: 1px solid var(--ov-08);
+}
+
+.ai-btn {
+    min-height: 42px;
+    padding: 10px 13px;
+    gap: 8px;
+    border-radius: 9px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.ai-btn-outline {
+    background: var(--ov-08);
+    border: 1px solid var(--ov-08);
+    color: var(--text);
+}
+
+.ai-btn-outline:hover {
+    background: rgba(37, 99, 235, 0.14);
+    border-color: var(--primary);
+    color: var(--accent);
+}
+
+.ai-btn-live {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    color: #ffffff;
+}
+
+.ai-demo-unavailable {
+    color: var(--text-light);
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* Remove excessive button shine */
+.ai-btn::before {
+    display: none;
+}
+
+/* Light mode */
+body:not(.dark) .ai-category,
+body:not(.dark) .ai-featured-label {
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .ai-projects-grid {
+        gap: 20px;
+    }
+
+    .ai-content {
+        padding: 21px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ai-projects {
+        padding: 70px 5%;
+    }
+
+    .ai-projects-header {
+        margin-bottom: 38px;
+    }
+
+    .ai-projects-header h2 {
+        font-size: 32px;
+    }
+
+    .ai-projects-header p {
+        font-size: 14px;
+    }
+
+    .ai-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .ai-image {
+        height: 210px;
+    }
+
+    .ai-content {
+        height: auto;
+        padding: 21px;
+    }
+
+    .ai-content h3 {
+        font-size: 20px;
+    }
+
+    .ai-content .ai-description {
+        font-size: 13px;
+    }
+
+    .ai-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .ai-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .ai-projects-header h2 {
+        font-size: 27px;
+    }
+
+    .ai-image {
+        height: 180px;
+    }
+
+    .ai-content {
+        padding: 17px;
+    }
+
+    .ai-image-overlay {
+        padding: 10px;
+    }
+
+    .ai-category,
+    .ai-featured-label {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+
+    .ai-btn {
+        min-width: 105px;
+        font-size: 11px;
+        padding: 10px 8px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .ai-project-card,
+    .ai-project-image,
+    .ai-tech span,
+    .ai-btn {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .ai-project-card:hover,
+    .ai-project-card:hover .ai-project-image {
+        transform: none !important;
+    }
+}
